@@ -62,9 +62,31 @@ export default function RightCopilot({ open, onClose }) {
       }
     }
 
-    // 2. Direct Gemini REST API Fallback (for demo/offline backend)
-    const geminiKey = import.meta.env.VITE_GEMINI_API_KEY
-    if (geminiKey) {
+    let backendSucceeded = false;
+
+    if (!isDemo && import.meta.env.VITE_API_URL) {
+      try {
+        const res = await api.askCopilot(msg, currentProject)
+        if (res && res.success && res.data?.reply) {
+          addCopilotMessage({ role: 'ai', text: res.data.reply })
+          setLoading('copilot', false)
+          backendSucceeded = true;
+          return;
+        }
+      } catch (e) {
+        console.warn("Backend copilot failed to respond, falling back to direct browser Gemini API...", e)
+      }
+    }
+
+    if (!backendSucceeded) {
+      // Direct Gemini REST API Fallback
+      const geminiKey = import.meta.env.VITE_GEMINI_API_KEY
+      if (!geminiKey) {
+        addCopilotMessage({ role: 'ai', text: "**Deployment Error:** The backend is unavailable AND your `VITE_GEMINI_API_KEY` environment variable is completely missing from this Vercel deployment. You need to add it to Vercel and click Redeploy." })
+        setLoading('copilot', false)
+        return;
+      }
+
       try {
         const sysPrompt = `You are the BuildAtlas AI Copilot, a senior construction manager & civil engineer in India.
 Answer the following construction inquiry short, crisp, and professionally. Use markdown formatting.
@@ -86,18 +108,22 @@ Question: ${msg}`
           if (reply) {
             addCopilotMessage({ role: 'ai', text: reply })
             setLoading('copilot', false)
-            return
+            return;
           }
         } else {
           const errText = await response.text();
-          console.error("Gemini API Error", response.status, errText);
+          addCopilotMessage({ role: 'ai', text: `**Google API Blocked:** The Google Gemini API rejected the request from your browser. Status: ${response.status}. This usually means your API Key has an **HTTP Referrer Restriction** in Google Cloud Console that blocks Vercel. Remove the restriction or allow all domains.\n\nRaw Error: ${errText}` })
+          setLoading('copilot', false)
+          return;
         }
       } catch (e) {
-        console.error("Direct Gemini API call failed entirely", e)
+        addCopilotMessage({ role: 'ai', text: `**Network Error:** Could not reach Google Gemini API directly from browser: ${e.message}` })
+        setLoading('copilot', false)
+        return;
       }
     }
 
-    // 3. Final Fallback to rule-based responses
+    // Final ultra-safe Fallback to rule-based responses if completely broken somehow
     addCopilotMessage({ role: 'ai', text: matchResponse(msg) })
     setLoading('copilot', false)
   }, [input, currentProject, addCopilotMessage, setLoading])

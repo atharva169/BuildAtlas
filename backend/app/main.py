@@ -53,11 +53,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",   # Vite dev server
-        "http://localhost:3000",   # Alternative dev server
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:3000",
-        "*",                       # Allow all for hackathon demo
+        "http://localhost:5173",
+        "https://build-atlas.vercel.app", # <-- ADD YOUR EXACT VERCEL DOMAIN HERE!
+        "*" # The asterisk acts as a hackathon fail-safe 
     ],
     allow_credentials=True,
     allow_methods=["*"],

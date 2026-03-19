@@ -1,0 +1,287 @@
+{
+  "materials": {
+    "tmt_steel_fe500": {
+      "name": "TMT Steel Fe500",
+      "unit": "kg",
+      "base_rate_inr": 72.0,
+      "variance_coefficient": 0.15,
+      "category": "structure",
+      "is_code": "IS 1786",
+      "description": "High strength reinforcement steel"
+    },
+    "opc_53_cement": {
+      "name": "OPC 53 Grade Cement",
+      "unit": "bag",
+      "base_rate_inr": 380.0,
+      "variance_coefficient": 0.08,
+      "category": "structure",
+      "is_code": "IS 269",
+      "description": "Ordinary Portland Cement for structural work"
+    },
+    "ppc_cement": {
+      "name": "PPC Cement",
+      "unit": "bag",
+      "base_rate_inr": 350.0,
+      "variance_coefficient": 0.07,
+      "category": "structure",
+      "is_code": "IS 1489",
+      "description": "Portland Pozzolana Cement for general work"
+    },
+    "m_sand": {
+      "name": "Manufactured Sand",
+      "unit": "cum",
+      "base_rate_inr": 1800.0,
+      "variance_coefficient": 0.10,
+      "category": "structure",
+      "is_code": "IS 383",
+      "description": "Crushed stone sand"
+    },
+    "river_sand": {
+      "name": "River Sand",
+      "unit": "cum",
+      "base_rate_inr": 2800.0,
+      "variance_coefficient": 0.20,
+      "category": "structure",
+      "is_code": "IS 383",
+      "description": "Natural river sand (restricted)"
+    },
+    "coarse_aggregate_20mm": {
+      "name": "Coarse Aggregate 20mm",
+      "unit": "cum",
+      "base_rate_inr": 1600.0,
+      "variance_coefficient": 0.08,
+      "category": "structure",
+      "is_code": "IS 383",
+      "description": "Crushed stone aggregate"
+    },
+    "red_brick": {
+      "name": "Red Clay Brick",
+      "unit": "nos",
+      "base_rate_inr": 8.5,
+      "variance_coefficient": 0.12,
+      "category": "masonry",
+      "is_code": "IS 1077",
+      "description": "Standard red clay brick 230×110×75mm"
+    },
+    "aac_block": {
+      "name": "AAC Block",
+      "unit": "cum",
+      "base_rate_inr": 3800.0,
+      "variance_coefficient": 0.10,
+      "category": "masonry",
+      "is_code": "IS 2185",
+      "description": "Autoclaved Aerated Concrete block"
+    },
+    "fly_ash_brick": {
+      "name": "Fly Ash Brick",
+      "unit": "nos",
+      "base_rate_inr": 7.0,
+      "variance_coefficient": 0.09,
+      "category": "masonry",
+      "is_code": "IS 12894",
+      "description": "Fly ash-lime-gypsum brick"
+    },
+    "rcc_m25": {
+      "name": "RCC M25 Grade",
+      "unit": "cum",
+      "base_rate_inr": 6500.0,
+      "variance_coefficient": 0.10,
+      "category": "structure",
+      "is_code": "IS 456",
+      "description": "Ready-mix concrete M25 grade"
+    },
+    "plaster_cement_mortar": {
+      "name": "Cement Plaster 1:4",
+      "unit": "sqm",
+      "base_rate_inr": 280.0,
+      "variance_coefficient": 0.06,
+      "category": "finishing",
+      "is_code": "IS 1661",
+      "description": "12mm thick cement plaster"
+    },
+    "electrical_wiring": {
+      "name": "Electrical Wiring",
+      "unit": "point",
+      "base_rate_inr": 1800.0,
+      "variance_coefficient": 0.08,
+      "category": "mep",
+      "is_code": "IS 694",
+      "description": "Per point including wire, switch, MCB"
+    },
+    "plumbing_cpvc": {
+      "name": "CPVC Plumbing",
+      "unit": "point",
+      "base_rate_inr": 2200.0,
+      "variance_coefficient": 0.07,
+      "category": "mep",
+      "is_code": "IS 15778",
+      "description": "Per point including pipe and fittings"
+    },
+    "vitrified_tiles": {
+      "name": "Vitrified Floor Tiles",
+      "unit": "sqm",
+      "base_rate_inr": 850.0,
+      "variance_coefficient": 0.12,
+      "category": "finishing",
+      "is_code": "IS 15622",
+      "description": "600×600mm vitrified tiles"
+    },
+    "wall_putty": {
+      "name": "Wall Putty",
+      "unit": "sqm",
+      "base_rate_inr": 65.0,
+      "variance_coefficient": 0.05,
+      "category": "finishing",
+      "is_code": "—",
+      "description": "White cement-based wall putty"
+    },
+    "interior_paint": {
+      "name": "Interior Emulsion Paint",
+      "unit": "sqm",
+      "base_rate_inr": 45.0,
+      "variance_coefficient": 0.06,
+      "category": "finishing",
+      "is_code": "IS 15489",
+      "description": "Premium acrylic emulsion 2 coats"
+    },
+    "exterior_paint": {
+      "name": "Exterior Weather Coat",
+      "unit": "sqm",
+      "base_rate_inr": 55.0,
+      "variance_coefficient": 0.07,
+      "category": "finishing",
+      "is_code": "IS 15489",
+      "description": "Exterior weather-resistant paint"
+    },
+    "waterproofing": {
+      "name": "Waterproofing Treatment",
+      "unit": "sqm",
+      "base_rate_inr": 180.0,
+      "variance_coefficient": 0.10,
+      "category": "finishing",
+      "is_code": "—",
+      "description": "APP membrane waterproofing"
+    },
+    "upvc_windows": {
+      "name": "UPVC Windows",
+      "unit": "sqft",
+      "base_rate_inr": 450.0,
+      "variance_coefficient": 0.08,
+      "category": "finishing",
+      "is_code": "IS 14402",
+      "description": "UPVC sliding windows with glass"
+    },
+    "main_door_teak": {
+      "name": "Teak Wood Main Door",
+      "unit": "nos",
+      "base_rate_inr": 35000.0,
+      "variance_coefficient": 0.15,
+      "category": "finishing",
+      "is_code": "IS 2202",
+      "description": "Solid teak main entrance door"
+    },
+    "internal_door_flush": {
+      "name": "Flush Door (Internal)",
+      "unit": "nos",
+      "base_rate_inr": 8500.0,
+      "variance_coefficient": 0.08,
+      "category": "finishing",
+      "is_code": "IS 2202",
+      "description": "Commercial flush door with frame"
+    },
+    "sanitary_set": {
+      "name": "Bathroom Sanitary Set",
+      "unit": "set",
+      "base_rate_inr": 18000.0,
+      "variance_coefficient": 0.15,
+      "category": "mep",
+      "is_code": "IS 2556",
+      "description": "WC + basin + shower mixer + accessories"
+    },
+    "excavation": {
+      "name": "Earth Excavation",
+      "unit": "cum",
+      "base_rate_inr": 350.0,
+      "variance_coefficient": 0.12,
+      "category": "foundation",
+      "is_code": "—",
+      "description": "Mechanical excavation in normal soil"
+    },
+    "pcc_m10": {
+      "name": "PCC M10 Grade",
+      "unit": "cum",
+      "base_rate_inr": 4800.0,
+      "variance_coefficient": 0.08,
+      "category": "foundation",
+      "is_code": "IS 456",
+      "description": "Plain cement concrete for bedding"
+    },
+    "anti_termite": {
+      "name": "Anti-Termite Treatment",
+      "unit": "sqm",
+      "base_rate_inr": 45.0,
+      "variance_coefficient": 0.05,
+      "category": "foundation",
+      "is_code": "IS 6313",
+      "description": "Chemical soil treatment"
+    }
+  },
+  "quantity_norms": {
+    "residential": {
+      "tmt_steel_fe500": { "per_sqft": 4.5, "per_unit": "kg" },
+      "opc_53_cement": { "per_sqft": 0.4, "per_unit": "bags" },
+      "ppc_cement": { "per_sqft": 0.4, "per_unit": "bags" },
+      "m_sand": { "per_sqft": 0.035, "per_unit": "cum" },
+      "river_sand": { "per_sqft": 0.035, "per_unit": "cum" },
+      "coarse_aggregate_20mm": { "per_sqft": 0.028, "per_unit": "cum" },
+      "red_brick": { "per_sqft": 8.0, "per_unit": "nos" },
+      "aac_block": { "per_sqft": 0.033, "per_unit": "cum" },
+      "fly_ash_brick": { "per_sqft": 8.0, "per_unit": "nos" },
+      "rcc_m25": { "per_sqft": 0.038, "per_unit": "cum" },
+      "plaster_cement_mortar": { "per_sqft": 2.2, "per_unit": "sqm" },
+      "electrical_wiring": { "per_sqft": 0.012, "per_unit": "point" },
+      "plumbing_cpvc": { "per_sqft": 0.006, "per_unit": "point" },
+      "vitrified_tiles": { "per_sqft": 0.093, "per_unit": "sqm" },
+      "wall_putty": { "per_sqft": 2.2, "per_unit": "sqm" },
+      "interior_paint": { "per_sqft": 2.2, "per_unit": "sqm" },
+      "exterior_paint": { "per_sqft": 0.6, "per_unit": "sqm" },
+      "waterproofing": { "per_sqft": 0.15, "per_unit": "sqm" },
+      "upvc_windows": { "per_sqft": 0.18, "per_unit": "sqft" },
+      "main_door_teak": { "per_floor": 1, "per_unit": "nos" },
+      "internal_door_flush": { "per_room": 1, "per_unit": "nos" },
+      "sanitary_set": { "per_bathroom": 1, "per_unit": "set" },
+      "excavation": { "per_sqft": 0.06, "per_unit": "cum" },
+      "pcc_m10": { "per_sqft": 0.015, "per_unit": "cum" },
+      "anti_termite": { "per_sqft": 0.093, "per_unit": "sqm" }
+    },
+    "commercial": {
+      "tmt_steel_fe500": { "per_sqft": 5.5, "per_unit": "kg" },
+      "opc_53_cement": { "per_sqft": 0.5, "per_unit": "bags" },
+      "m_sand": { "per_sqft": 0.042, "per_unit": "cum" },
+      "coarse_aggregate_20mm": { "per_sqft": 0.035, "per_unit": "cum" },
+      "aac_block": { "per_sqft": 0.04, "per_unit": "cum" },
+      "rcc_m25": { "per_sqft": 0.045, "per_unit": "cum" },
+      "plaster_cement_mortar": { "per_sqft": 2.5, "per_unit": "sqm" },
+      "electrical_wiring": { "per_sqft": 0.015, "per_unit": "point" },
+      "plumbing_cpvc": { "per_sqft": 0.004, "per_unit": "point" },
+      "vitrified_tiles": { "per_sqft": 0.093, "per_unit": "sqm" },
+      "wall_putty": { "per_sqft": 2.5, "per_unit": "sqm" },
+      "interior_paint": { "per_sqft": 2.5, "per_unit": "sqm" },
+      "exterior_paint": { "per_sqft": 0.8, "per_unit": "sqm" },
+      "waterproofing": { "per_sqft": 0.2, "per_unit": "sqm" },
+      "upvc_windows": { "per_sqft": 0.22, "per_unit": "sqft" },
+      "excavation": { "per_sqft": 0.08, "per_unit": "cum" },
+      "pcc_m10": { "per_sqft": 0.018, "per_unit": "cum" },
+      "anti_termite": { "per_sqft": 0.093, "per_unit": "sqm" }
+    }
+  },
+  "labour_items": {
+    "mason": { "rate_per_day": 800, "unit": "manday" },
+    "helper": { "rate_per_day": 500, "unit": "manday" },
+    "carpenter": { "rate_per_day": 750, "unit": "manday" },
+    "electrician": { "rate_per_day": 850, "unit": "manday" },
+    "plumber": { "rate_per_day": 800, "unit": "manday" },
+    "painter": { "rate_per_day": 700, "unit": "manday" },
+    "bar_bender": { "rate_per_day": 850, "unit": "manday" }
+  }
+}

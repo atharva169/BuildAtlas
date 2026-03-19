@@ -1,0 +1,81 @@
+{
+  "substitutions": {
+    "red_brick_to_aac": {
+      "original": "red_brick",
+      "replacement": "aac_block",
+      "cost_delta_pct": 15,
+      "time_delta_pct": -10,
+      "weight_reduction_pct": 60,
+      "strength": "equivalent",
+      "original_is_code": "IS 1077",
+      "replacement_is_code": "IS 2185",
+      "notes": "AAC is lighter, better insulation, faster laying. May not be available in all Tier-2 cities."
+    },
+    "red_brick_to_flyash": {
+      "original": "red_brick",
+      "replacement": "fly_ash_brick",
+      "cost_delta_pct": -5,
+      "time_delta_pct": 0,
+      "weight_reduction_pct": 10,
+      "strength": "equivalent",
+      "original_is_code": "IS 1077",
+      "replacement_is_code": "IS 12894",
+      "notes": "Eco-friendly, similar size/weight to red brick. Widely available."
+    },
+    "opc_to_ppc": {
+      "original": "opc_53_cement",
+      "replacement": "ppc_cement",
+      "cost_delta_pct": -8,
+      "time_delta_pct": 5,
+      "weight_reduction_pct": 0,
+      "strength": "equivalent_28day",
+      "original_is_code": "IS 269",
+      "replacement_is_code": "IS 1489",
+      "notes": "PPC has slower early strength gain but equal 28-day strength. Better for mass concrete. More eco-friendly."
+    },
+    "river_sand_to_msand": {
+      "original": "river_sand",
+      "replacement": "m_sand",
+      "cost_delta_pct": -35,
+      "time_delta_pct": 0,
+      "weight_reduction_pct": 0,
+      "strength": "equivalent",
+      "original_is_code": "IS 383",
+      "replacement_is_code": "IS 383",
+      "notes": "M-sand is cheaper and more consistent quality. Recommended by CPWD. River sand mining restricted in many states."
+    },
+    "fe500_to_fe415": {
+      "original": "tmt_steel_fe500",
+      "replacement": "tmt_steel_fe415",
+      "cost_delta_pct": -5,
+      "time_delta_pct": 0,
+      "weight_reduction_pct": 0,
+      "strength": "lower_yield",
+      "original_is_code": "IS 1786",
+      "replacement_is_code": "IS 1786",
+      "notes": "Fe415 has lower yield strength (415 vs 500 MPa). More steel quantity needed. Only feasible for low-rise (G+1)."
+    },
+    "vitrified_to_ceramic": {
+      "original": "vitrified_tiles",
+      "replacement": "ceramic_tiles",
+      "cost_delta_pct": -40,
+      "time_delta_pct": 0,
+      "weight_reduction_pct": 0,
+      "strength": "lower_hardness",
+      "original_is_code": "IS 15622",
+      "replacement_is_code": "IS 13630",
+      "notes": "Ceramic is cheaper but less durable and water-resistant. Suitable for bedrooms. Not recommended for high-traffic areas."
+    },
+    "teak_to_flush": {
+      "original": "main_door_teak",
+      "replacement": "internal_door_flush",
+      "cost_delta_pct": -75,
+      "time_delta_pct": -5,
+      "weight_reduction_pct": 40,
+      "strength": "lower_durability",
+      "original_is_code": "IS 2202",
+      "replacement_is_code": "IS 2202",
+      "notes": "Significant cost saving. Suitable for internal doors but not recommended for main entrance."
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "karnataka": {
+    "mason": 800, "helper": 500, "carpenter": 750,
+    "electrician": 850, "plumber": 800, "painter": 700, "bar_bender": 850,
+    "migration_flag": "Oct-Nov post-harvest influx from North Karnataka",
+    "peak_season": "Jan-May"
+  },
+  "maharashtra": {
+    "mason": 850, "helper": 550, "carpenter": 800,
+    "electrician": 900, "plumber": 850, "painter": 750, "bar_bender": 900,
+    "migration_flag": "Post-monsoon return migration Oct",
+    "peak_season": "Nov-May"
+  },
+  "delhi": {
+    "mason": 900, "helper": 600, "carpenter": 850,
+    "electrician": 950, "plumber": 900, "painter": 750, "bar_bender": 950,
+    "migration_flag": "Dec-Jan cold weather slowdown, labour returns Feb",
+    "peak_season": "Feb-Jun"
+  },
+  "tamil_nadu": {
+    "mason": 750, "helper": 450, "carpenter": 700,
+    "electrician": 800, "plumber": 750, "painter": 650, "bar_bender": 800,
+    "migration_flag": "No significant migration pattern",
+    "peak_season": "Jan-Sep"
+  },
+  "telangana": {
+    "mason": 700, "helper": 450, "carpenter": 700,
+    "electrician": 800, "plumber": 750, "painter": 650, "bar_bender": 800,
+    "migration_flag": "Minimal seasonal variation",
+    "peak_season": "Year-round"
+  },
+  "west_bengal": {
+    "mason": 650, "helper": 400, "carpenter": 650,
+    "electrician": 750, "plumber": 700, "painter": 600, "bar_bender": 700,
+    "migration_flag": "Durga Puja (Oct) — 2 week labour gap",
+    "peak_season": "Nov-May"
+  },
+  "gujarat": {
+    "mason": 700, "helper": 450, "carpenter": 700,
+    "electrician": 800, "plumber": 750, "painter": 650, "bar_bender": 750,
+    "migration_flag": "Diwali + Navratri festival season Oct-Nov",
+    "peak_season": "Dec-May"
+  },
+  "rajasthan": {
+    "mason": 650, "helper": 400, "carpenter": 600,
+    "electrician": 700, "plumber": 650, "painter": 550, "bar_bender": 700,
+    "migration_flag": "Summer heat (May-Jun) causes 20% productivity drop",
+    "peak_season": "Oct-Mar"
+  },
+  "uttar_pradesh": {
+    "mason": 600, "helper": 350, "carpenter": 600,
+    "electrician": 700, "plumber": 650, "painter": 550, "bar_bender": 650,
+    "migration_flag": "Harvest seasons (Apr, Oct) cause labour shortage",
+    "peak_season": "Nov-Mar"
+  },
+  "kerala": {
+    "mason": 1000, "helper": 650, "carpenter": 950,
+    "electrician": 1050, "plumber": 1000, "painter": 850, "bar_bender": 1000,
+    "migration_flag": "Onam season (Aug-Sep) — 1 week gap. Highest labour costs in India.",
+    "peak_season": "Oct-May"
+  },
+  "chandigarh": {
+    "mason": 800, "helper": 500, "carpenter": 750,
+    "electrician": 850, "plumber": 800, "painter": 700, "bar_bender": 800,
+    "migration_flag": "Winter (Dec-Jan) reduced productivity",
+    "peak_season": "Mar-Nov"
+  }
+}

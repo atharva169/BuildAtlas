@@ -1,0 +1,77 @@
+{
+  "regulations": {
+    "rera": {
+      "name": "RERA Registration",
+      "applicable_to": ["residential", "commercial"],
+      "min_area_sqft": 5000,
+      "avg_tat_days": 30,
+      "required_docs": ["Title documents", "Layout approval", "Building plan approval", "Encumbrance certificate"]
+    },
+    "building_plan": {
+      "name": "Building Plan Approval",
+      "applicable_to": ["residential", "commercial", "industrial"],
+      "min_area_sqft": 0,
+      "avg_tat_days": 45,
+      "required_docs": ["Site plan", "Building drawings", "Structural drawings", "Ownership proof", "Tax receipts"]
+    },
+    "environmental_clearance": {
+      "name": "Environmental Clearance",
+      "applicable_to": ["commercial", "industrial"],
+      "min_area_sqft": 20000,
+      "avg_tat_days": 90,
+      "required_docs": ["EIA report", "Public hearing records", "CRZ clearance (if applicable)"]
+    },
+    "fire_noc": {
+      "name": "Fire NOC",
+      "applicable_to": ["residential", "commercial", "industrial"],
+      "min_floors": 4,
+      "avg_tat_days": 30,
+      "required_docs": ["Fire safety plan", "Equipment specifications", "Exit plan drawings"]
+    },
+    "clra": {
+      "name": "CLRA Registration",
+      "applicable_to": ["residential", "commercial", "industrial"],
+      "min_workers": 20,
+      "avg_tat_days": 15,
+      "required_docs": ["Contractor details", "Worker count estimate", "Safety plan"]
+    }
+  },
+  "state_specific": {
+    "karnataka": {
+      "authority": "BBMP / BDA",
+      "additional_approvals": ["BDA layout approval", "BWSSB connection", "BESCOM connection"],
+      "avg_building_plan_tat": 45,
+      "notes": "Online portal SAKALA for tracking"
+    },
+    "maharashtra": {
+      "authority": "BMC / PMRDA",
+      "additional_approvals": ["IOD (Intimation of Disapproval)", "CC (Commencement Certificate)"],
+      "avg_building_plan_tat": 60,
+      "notes": "Two-stage approval: IOD then CC"
+    },
+    "delhi": {
+      "authority": "DDA / MCD",
+      "additional_approvals": ["DDA layout approval", "DJB connection", "BSES connection"],
+      "avg_building_plan_tat": 50,
+      "notes": "Online building plan approval via DPMS"
+    },
+    "tamil_nadu": {
+      "authority": "CMDA / DTCP",
+      "additional_approvals": ["CMDA planning permission", "Metro water connection"],
+      "avg_building_plan_tat": 40,
+      "notes": "Single window system available"
+    },
+    "telangana": {
+      "authority": "GHMC / HMDA",
+      "additional_approvals": ["HMDA layout approval", "HMWSSB connection"],
+      "avg_building_plan_tat": 35,
+      "notes": "TS-bPASS online portal — fastest in India"
+    },
+    "gujarat": {
+      "authority": "AMC / AUDA",
+      "additional_approvals": ["AUDA layout approval", "GWSSB connection"],
+      "avg_building_plan_tat": 40,
+      "notes": "Online portal for approvals"
+    }
+  }
+}

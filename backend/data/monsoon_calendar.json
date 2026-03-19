@@ -1,0 +1,13 @@
+{
+  "karnataka":       { "start_month": 6,  "end_month": 9,  "severity": "moderate", "outdoor_lockout_pct": 0.6 },
+  "maharashtra":     { "start_month": 6,  "end_month": 10, "severity": "heavy",    "outdoor_lockout_pct": 0.7 },
+  "delhi":           { "start_month": 7,  "end_month": 9,  "severity": "moderate", "outdoor_lockout_pct": 0.5 },
+  "tamil_nadu":      { "start_month": 10, "end_month": 12, "severity": "heavy",    "outdoor_lockout_pct": 0.7 },
+  "telangana":       { "start_month": 6,  "end_month": 9,  "severity": "moderate", "outdoor_lockout_pct": 0.5 },
+  "west_bengal":     { "start_month": 6,  "end_month": 9,  "severity": "heavy",    "outdoor_lockout_pct": 0.7 },
+  "gujarat":         { "start_month": 7,  "end_month": 9,  "severity": "moderate", "outdoor_lockout_pct": 0.5 },
+  "rajasthan":       { "start_month": 7,  "end_month": 8,  "severity": "light",    "outdoor_lockout_pct": 0.3 },
+  "uttar_pradesh":   { "start_month": 7,  "end_month": 9,  "severity": "moderate", "outdoor_lockout_pct": 0.5 },
+  "kerala":          { "start_month": 6,  "end_month": 9,  "severity": "heavy",    "outdoor_lockout_pct": 0.8 },
+  "chandigarh":      { "start_month": 7,  "end_month": 9,  "severity": "moderate", "outdoor_lockout_pct": 0.5 }
+}

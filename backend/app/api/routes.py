@@ -294,6 +294,61 @@ async def copilot_chat(req: CopilotRequest):
 
 
 # ══════════════════════════════════════════════════════════════════════
+# AI Report Generator
+# ══════════════════════════════════════════════════════════════════════
+
+@router.post("/report")
+async def generate_report(project: ProjectInput):
+    """Generate a full AI-powered project feasibility report."""
+    # Aggregate all engine outputs
+    cost = _cost_engine.estimate(project)
+    schedule = _schedule_engine.generate(project)
+    risk_register = _risk_engine.assess(project)
+
+    # Build rich data context for Gemini
+    top_risks = sorted(risk_register.risks, key=lambda r: r.score, reverse=True)[:3]
+    risk_summary = "\n".join(
+        f"- {r.title}: {r.score}/10 ({r.severity}) — {r.mitigation}"
+        for r in top_risks
+    )
+
+    project_data = (
+        f"Project: {project.project_name}\n"
+        f"City: {project.city} | Type: {project.project_type.value} | Floors: {project.floors}\n"
+        f"Built-up Area: {project.builtup_sqft} sqft | Quality: {project.quality.value}\n"
+        f"Plot: {project.plot_length_ft}x{project.plot_width_ft} ft | Soil: {project.soil_type}\n"
+        f"Start: Month {project.start_month}/{project.start_year} | Vastu: {'Yes' if project.vastu else 'No'}\n\n"
+        f"COST ESTIMATE:\n"
+        f"  P10 (Optimistic): ₹{cost.total.p10:.2f}L\n"
+        f"  P50 (Median):     ₹{cost.total.p50:.2f}L\n"
+        f"  P90 (Pessimistic): ₹{cost.total.p90:.2f}L\n"
+        f"  Cost/sqft (P50):  ₹{cost.cost_per_sqft.p50:.0f}\n"
+        f"  Variance Driver:  {cost.variance_driver}\n\n"
+        f"SCHEDULE:\n"
+        f"  Total Duration:   {schedule.total_months} months ({schedule.total_weeks} weeks)\n"
+        f"  Monsoon Lockout:  {schedule.monsoon_lockout_weeks} weeks\n"
+        f"  Approval Wait:    {schedule.approval_wait_weeks} weeks\n"
+        f"  Critical Path:    {' → '.join(schedule.phases[i].name for i in schedule.critical_path_indices)}\n\n"
+        f"TOP RISKS (Overall: {risk_register.overall_score}/10):\n{risk_summary}"
+    )
+
+    # Generate report via Gemini
+    report_md = await _gemini.generate("project_report", {
+        "project_data": project_data,
+        "project_name": project.project_name,
+    })
+
+    return APIResponse(
+        success=True,
+        data={
+            "report_markdown": report_md,
+            "ai_generated": _gemini.is_available,
+            "project_name": project.project_name,
+        },
+    ).model_dump()
+
+
+# ══════════════════════════════════════════════════════════════════════
 # Compliance
 # ══════════════════════════════════════════════════════════════════════
 

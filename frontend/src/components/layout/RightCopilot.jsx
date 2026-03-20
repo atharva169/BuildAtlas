@@ -93,7 +93,7 @@ Answer the following construction inquiry short, crisp, and professionally. Use 
 Base context: Project is in ${currentProject?.city || 'Bengaluru'}.
 Question: ${msg}`
 
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiKey}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${geminiKey}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -112,9 +112,14 @@ Question: ${msg}`
           }
         } else {
           const errText = await response.text();
-          addCopilotMessage({ role: 'ai', text: `**Google API Blocked:** The Google Gemini API rejected the request from your browser. Status: ${response.status}. This usually means your API Key has an **HTTP Referrer Restriction** in Google Cloud Console that blocks Vercel. Remove the restriction or allow all domains.\n\nRaw Error: ${errText}` })
-          setLoading('copilot', false)
-          return;
+          if (response.status === 429) {
+            console.warn("Gemini Rate Limit (429) hit. Falling back to rule-based answers.");
+            // Do not return; let execution continue to the ultra-safe fallback below
+          } else {
+            addCopilotMessage({ role: 'ai', text: `**Google API Blocked:** The Google Gemini API rejected the request. Status: ${response.status}.\n\nRaw Error: ${errText}` })
+            setLoading('copilot', false)
+            return;
+          }
         }
       } catch (e) {
         addCopilotMessage({ role: 'ai', text: `**Network Error:** Could not reach Google Gemini API directly from browser: ${e.message}` })

@@ -5,6 +5,7 @@ import useProjectData from './hooks/useProjectData'
 import Layout from './components/layout/Layout'
 import ErrorBoundary from './components/ErrorBoundary'
 import LoadingSpinner from './components/ui/LoadingSpinner'
+import { ParallaxComponent } from './components/ui/ParallaxScrolling'
 
 // ── Lazy-loaded feature pages ─────────────────────────────────────────
 const Dashboard        = lazy(() => import('./components/features/dashboard/Dashboard'))
@@ -64,8 +65,14 @@ function PageRouter() {
 }
 
 export default function App() {
+  const [showLanding, setShowLanding] = React.useState(true)
+  
   // Initialize offline-first data layer
   useProjectData()
+
+  if (showLanding) {
+    return <ParallaxComponent onEnterSite={() => setShowLanding(false)} />
+  }
 
   return (
     <Layout>

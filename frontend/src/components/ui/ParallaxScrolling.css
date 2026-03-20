@@ -1,0 +1,99 @@
+.parallax {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #04080F;
+  color: white;
+}
+
+.parallax__header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.parallax__visuals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax__black-line-overflow {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: transparent;
+  z-index: 10;
+}
+
+.parallax__layers {
+  position: relative;
+  width: 100%;
+  height: 130%; /* Extra height for parallax */
+  top: -15%;
+  overflow: hidden;
+}
+
+.parallax__layer-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  will-change: transform;
+}
+
+.parallax__layer-img-inner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.parallax__layer-title {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  will-change: transform;
+}
+
+.parallax__title {
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  letter-spacing: -0.02em;
+  margin-top: -15vh;
+}
+
+.parallax__foreground-container {
+  z-index: 4;
+}
+
+.parallax__fade {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(to top, #04080F 0%, rgba(4,8,15,0) 100%);
+  z-index: 20;
+}
+
+.parallax__content {
+  position: relative;
+  background-color: #04080F;
+  min-height: 100vh;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+}

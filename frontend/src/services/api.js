@@ -140,4 +140,6 @@ export const api = {
     (project) => post('/api/compliance', project),
     null // Seed data handles this
   ),
+
+  generateReport: (project) => post('/api/report', project),
 }

@@ -46,6 +46,27 @@ SYSTEM_PROMPTS: dict[str, str] = {
         "In 2–3 sentences explain which option you recommend and why, considering "
         "long-term value, maintenance costs, and India-specific construction realities."
     ),
+    "project_report": (
+        "You are a senior Indian construction consultant generating a professional project feasibility report.\n\n"
+        "PROJECT DATA:\n{project_data}\n\n"
+        "Generate a structured feasibility report in markdown with EXACTLY these sections:\n\n"
+        "# Project Feasibility Report: {project_name}\n\n"
+        "## 1. Executive Summary\n"
+        "(3-4 sentences summarizing the project, key findings, and overall recommendation)\n\n"
+        "## 2. Cost Analysis\n"
+        "(Interpret P10/P50/P90 bands. Explain what drives variance. Recommend contingency %)\n\n"
+        "## 3. Schedule & Monsoon Impact\n"
+        "(Analyse the timeline, monsoon overlap, critical path risks, and mitigation)\n\n"
+        "## 4. Top Risks & AI Mitigation Strategies\n"
+        "(List top 3 risks with scores, explain each, provide actionable mitigations with IS code refs)\n\n"
+        "## 5. Material Recommendations\n"
+        "(Recommend optimal materials for this city/quality grade, cite IS codes)\n\n"
+        "## 6. Compliance Summary\n"
+        "(List key RERA, municipal, and IS code requirements for this project)\n\n"
+        "## 7. AI Recommendation\n"
+        "(Final go/no-go recommendation with 2-3 specific action items for the builder)\n\n"
+        "Use Indian construction terms (lakh, crore, sqft). Cite specific IS codes. Be data-driven and professional."
+    ),
 }
 
 # Fallback templates when Gemini is unavailable
@@ -65,6 +86,12 @@ FALLBACK_TEMPLATES: dict[str, str] = {
     "reverse_planning": (
         "Based on your budget and timeline, the standard grade offers the best balance of "
         "quality, cost, and construction speed for most Indian residential projects."
+    ),
+    "project_report": (
+        "# Project Feasibility Report\n\n"
+        "## Executive Summary\nThis project appears feasible based on the provided parameters. "
+        "A detailed AI-generated report requires the Gemini API connection.\n\n"
+        "## Recommendation\nProceed with standard specifications and maintain a 15% contingency buffer."
     ),
 }
 

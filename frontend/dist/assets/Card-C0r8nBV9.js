@@ -1,1 +1,0 @@
-import{j as d}from"./index-szY4E9yE.js";function c({children:s,variant:t="default",accent:a,onClick:r,className:o="",glow:i}){const e=`card-${i?"active":t} ${o}`;return d.jsx("div",{className:e,onClick:r,style:a?{borderTop:`2px solid ${a}`}:void 0,children:s})}export{c as C};
